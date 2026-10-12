@@ -1,0 +1,17 @@
+{
+  "name": "vendora-phase3",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Vendora Phase III full-stack monorepo with MongoDB/Mongoose persistence",
+  "scripts": {
+    "install:all": "npm --prefix vendora-backend install && npm --prefix vendora-frontend install",
+    "seed": "npm --prefix vendora-backend run seed",
+    "dev": "concurrently -n API,WEB -c auto \"npm --prefix vendora-backend run dev\" \"npm --prefix vendora-frontend run dev\"",
+    "test": "npm --prefix vendora-backend test",
+    "build": "npm --prefix vendora-frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "license": "MIT"
+}

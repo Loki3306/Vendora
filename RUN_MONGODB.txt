@@ -1,0 +1,27 @@
+VENDORA MONGODB — WINDOWS POWERSHELL QUICK START
+
+1) Make sure MongoDB Community Server is installed and the MongoDB service is running.
+   OR use MongoDB Atlas and put the Atlas connection string in vendora-backend/.env.
+
+2) Open PowerShell inside the extracted vendora folder and run:
+
+Set-ExecutionPolicy -Scope Process Bypass
+.\setup.ps1
+npm run seed
+npm run dev
+
+3) Open:
+Frontend: http://localhost:5173
+Backend:  http://localhost:5000
+Health:   http://localhost:5000/health
+
+Demo accounts:
+Customer: rahul.m@gmail.com / password123
+Vendor:   arjun.k@gmail.com / password123
+Admin:    admin@vendora.com / admin123
+
+For future runs:
+npm run dev
+
+To reset demo data:
+npm run seed
